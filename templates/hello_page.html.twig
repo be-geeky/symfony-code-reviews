@@ -1,1 +1,11 @@
-Hello, CodeReviewVideos!
+{% extends 'base.html.twig' %}
+{% block title %}custom title{% endblock %}
+{% block body %}
+<div>
+    Hello, {{ app.request.get('name') | default('Dushyant')}}!
+</div>
+<div>
+    Some variable: {{ some_name | default('Some Default Value')}}
+</div>
+
+{% endblock %}
