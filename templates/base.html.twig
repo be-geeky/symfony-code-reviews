@@ -43,7 +43,8 @@
 </header>
 
 <main role="main" class="container main">
-    {% block body %}1111{% endblock %}
+    {% include 'flash_messages.html.twig' %}
+    {% block body %}{% endblock %}
 </main>
 
 {% block javascripts %}{% endblock %}

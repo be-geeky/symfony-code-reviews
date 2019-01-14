@@ -18,9 +18,13 @@ class ContactType extends AbstractType
         $builder
             ->add('name')
             ->add('from',EmailType::class)
-            ->add('dateOfBirth',DateTimeType::class)
+            ->add('dateOfBirth',DateTimeType::class,array(
+                'time_label' => 'Starts On'))
             ->add('message',TextareaType::class);
         ;
+        // $builder->add('startDateTime', DateTimeType::class, array(
+        //     'time_label' => 'Starts On',
+        // ));
     }
 
     public function configureOptions(OptionsResolver $resolver)
